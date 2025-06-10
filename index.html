@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cat vs Dog Predictor</title>
+  <title>Pet Classification for Veterinary Hospitals</title>
   <style>
     body {
       margin: 0;
@@ -16,12 +16,20 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 2rem;
+    h1 {
+      font-size: 2.5rem;
       text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.2);
       animation: fadeIn 1s ease-out;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      padding: 1rem;
+      animation: fadeIn 1.2s ease-out;
     }
 
     form {
@@ -79,7 +87,10 @@
   </style>
 </head>
 <body>
-  <h2>Upload a Cat or Dog Image 🐾</h2>
+  <h1>AI-Powered Pet Classification for Veterinary Hospitals 🐾</h1>
+  <p>Modern veterinary hospitals leverage AI-driven pet classification to enhance diagnostic accuracy and improve animal healthcare. By analyzing images of pets, advanced technology can identify species, detect health anomalies, and streamline treatment recommendations.</p>
+  <p>This AI-powered classification system is particularly useful in emergency care, allowing veterinarians to assess cases faster and ensure the best medical outcomes for pets.</p>
+  <p>Upload an image of a cat or dog to experience the power of AI in veterinary diagnostics!</p>
   <form action="/" method="post" enctype="multipart/form-data">
     <input type="file" name="image" accept="image/*" required>
     <button type="submit">Predict</button>
