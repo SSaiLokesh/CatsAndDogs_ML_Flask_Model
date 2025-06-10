@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Step 1: Install Python dependencies
-pip install -r requirements.txt
+pip install -r requirments.txt
 
 # Step 2: Download and extract model/dataset
 # (Only if needed during app runtime)
