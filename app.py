@@ -5,7 +5,10 @@ import numpy as np
 import pickle
 from werkzeug.utils import secure_filename
 
+import zipfile
+
 app = Flask(__name__)
+
 
 # Load the trained SVM model
 MODEL_PATH = 'PetImages/SVM_CatDog_Model.pickle'
