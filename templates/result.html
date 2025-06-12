@@ -4,88 +4,70 @@
   <meta charset="UTF-8" />
   <title>Prediction Result</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      min-height: 100vh;
+      background: linear-gradient(to bottom right, #1e1e2f, #121218);
+      color: #f0f0f0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 2rem;
-      text-align: center;
+      height: 100vh;
+      animation: fadeIn 0.8s ease-in;
     }
 
     h2 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
-      background: linear-gradient(to right, #ff6ec4, #7873f5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 20px #ff6ec4aa;
+      text-shadow: 0 2px 12px rgba(255, 255, 255, 0.1);
       animation: slideDown 0.6s ease-out;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #ccc;
-      margin-bottom: 2rem;
-      max-width: 600px;
     }
 
     img {
       max-height: 300px;
-      border-radius: 16px;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
     img:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 35px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
     }
 
     a {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      background: linear-gradient(45deg, #ff6ec4, #7873f5);
-      border-radius: 30px;
+      margin-top: 2rem;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
       color: #fff;
       text-decoration: none;
+      border-radius: 30px;
       font-weight: bold;
-      box-shadow: 0 0 15px #ff6ec4aa;
-      transition: all 0.3s ease;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(255, 126, 95, 0.3);
     }
 
     a:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 25px #ff6ec4dd;
+      background: linear-gradient(to right, #feb47b, #ff7e5f);
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
     }
 
     @keyframes slideDown {
-      from {
-        transform: translateY(-20px);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      from { transform: translateY(-20px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
   <h2>Prediction: {{ label }}</h2>
-  <p>This AI model predicts whether the uploaded image is of a cat or dog using advanced machine learning techniques. See the result below!</p>
-  <img src="{{ image_url }}" alt="Uploaded Pet Image">
-  <a href="/">Try Another Image</a>
+  <img src="{{ image_url }}" alt="Uploaded Image">
+  <a href="/">Try Another</a>
 </body>
 </html>
